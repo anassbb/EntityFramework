@@ -12,6 +12,11 @@ namespace EntityFramework
         {
             using (var db = new Models.TestDbContext())
             {
+                Etudaint student = db.Etudiants.Where(x => x.Id == 1).SingleOrDefault();
+
+                Console.WriteLine(student.Name);
+
+                Console.ReadLine();
                 //var Students = db.Etudiants.ToList();
 
                 //foreach (var item in Students)
@@ -26,14 +31,12 @@ namespace EntityFramework
                 //    Console.WriteLine(item.Name);
                 //}
 
-                List<string> stds = db.Etudiants.Select(x => x.Name).ToList();
+                //List<string> stds = db.Etudiants.Select(x => x.Name).ToList();
 
-                foreach (var item in stds)
-                {
-                    Console.WriteLine(item);
-                }
-
-                Console.ReadLine();
+                //foreach (var item in stds)
+                //{
+                //    Console.WriteLine(item);
+                //}
             }
         }
     }
