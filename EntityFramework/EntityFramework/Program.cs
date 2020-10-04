@@ -12,12 +12,16 @@ namespace EntityFramework
         {
             using (var db = new Models.TestDbContext())
             {
-                List<Etudaint> student = db.Etudiants.Where(x => x.Name.EndsWith("d")).ToList();
+                var sum = db.Etudiants.Sum(x => x.Id);
+                var max = db.Etudiants.Max(x => x.Id);
+                var min = db.Etudiants.Min(x => x.Id);
 
-                foreach (var item in student)
-                {
-                    Console.WriteLine(item.Name);
-                };
+                Console.WriteLine("sum =" + sum + ", max =" + max + ", min = " + min);
+
+                //foreach (var item in student)
+                //{
+                //    Console.WriteLine(item.Name);
+                //};
                 //var students = db.Etudiants.OrderBy(x => x.Id).AsEnumerable().AsParallel().AsOrdered().ToList();
 
                 //foreach (var item in students)
