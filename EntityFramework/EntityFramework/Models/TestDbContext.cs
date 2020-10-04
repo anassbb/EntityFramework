@@ -8,7 +8,9 @@ namespace EntityFramework.Models
 {
     class TestDbContext : DbContext
     {
-        public DbSet<Student> students { get; set; }
+        public DbSet<Student> Students { get; set; }
+
+        public DbSet<StudentAddress> Addresses { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             SqlConnectionStringBuilder ConnectionString = new SqlConnectionStringBuilder()
