@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace EntityFramework
@@ -10,7 +11,13 @@ namespace EntityFramework
         {
             using (var db = new Models.TestDbContext())
             {
-                db.Database.EnsureCreated();
+                var Students = db.Etudiants.ToList();
+
+                foreach (var item in Students)
+                {
+                    Console.WriteLine(item.Name);
+                }
+                Console.ReadLine();
             }
         }
     }
