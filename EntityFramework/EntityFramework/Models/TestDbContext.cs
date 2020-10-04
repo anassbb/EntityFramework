@@ -15,6 +15,12 @@ namespace EntityFramework.Models
         public DbSet<Student> Students { get; set; }
 
         public DbSet<StudentAddress> Addresses { get; set; }
+
+        public DbSet<Etudaint> Etudiants { get; set; }
+        public DbSet<Courses> Courses { get; set; }
+
+        public DbSet<EtudiantCourseRelation> EtudiantCourseRelations { get; set; }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             SqlConnectionStringBuilder ConnectionString = new SqlConnectionStringBuilder()
