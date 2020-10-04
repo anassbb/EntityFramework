@@ -8,6 +8,10 @@ namespace EntityFramework.Models
 {
     class TestDbContext : DbContext
     {
+        public DbSet<Human> Persons { get; set; }
+
+        public DbSet<Car> cars { get; set; }
+
         public DbSet<Student> Students { get; set; }
 
         public DbSet<StudentAddress> Addresses { get; set; }
