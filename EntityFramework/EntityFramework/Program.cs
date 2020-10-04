@@ -12,6 +12,11 @@ namespace EntityFramework
         {
             using (var db = new Models.TestDbContext())
             {
+                Etudaint student = db.Etudiants.Where(x => x.Id == 1).SingleOrDefault();
+
+                Console.WriteLine(student.Name);
+
+                Console.ReadLine();
                 //var Students = db.Etudiants.ToList();
 
                 //foreach (var item in Students)
