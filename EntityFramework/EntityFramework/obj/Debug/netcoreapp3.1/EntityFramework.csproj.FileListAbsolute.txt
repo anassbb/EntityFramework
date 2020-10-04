@@ -1,0 +1,4 @@
+C:\Users\anasa\source\repos\EntityFramework\EntityFramework\bin\Debug\netcoreapp3.1\EntityFramework.exe
+C:\Users\anasa\source\repos\EntityFramework\EntityFramework\obj\Debug\netcoreapp3.1\EntityFramework.csprojAssemblyReference.cache
+C:\Users\anasa\source\repos\EntityFramework\EntityFramework\obj\Debug\netcoreapp3.1\EntityFramework.AssemblyInfoInputs.cache
+C:\Users\anasa\source\repos\EntityFramework\EntityFramework\obj\Debug\netcoreapp3.1\EntityFramework.AssemblyInfo.cs
