@@ -12,12 +12,18 @@ namespace EntityFramework
         {
             using (var db = new Models.TestDbContext())
             {
-                var students = db.Etudiants.OrderBy(x => x.Id).AsEnumerable().AsParallel().AsOrdered().ToList();
+                List<Etudaint> student = db.Etudiants.Where(x => x.Name.EndsWith("d")).ToList();
 
-                foreach (var item in students)
+                foreach (var item in student)
                 {
                     Console.WriteLine(item.Name);
-                }
+                };
+                //var students = db.Etudiants.OrderBy(x => x.Id).AsEnumerable().AsParallel().AsOrdered().ToList();
+
+                //foreach (var item in students)
+                //{
+                //    Console.WriteLine(item.Name);
+                //}
 
                 //Etudaint student = db.Etudiants.Where(x => x.Id == 1).SingleOrDefault();
 
