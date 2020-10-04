@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EntityFramework.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,18 +12,25 @@ namespace EntityFramework
         {
             using (var db = new Models.TestDbContext())
             {
-                var Students = db.Etudiants.ToList();
+                //var Students = db.Etudiants.ToList();
 
-                foreach (var item in Students)
+                //foreach (var item in Students)
+                //{
+                //    Console.WriteLine(item.Name);
+                //}
+
+                //Students = db.Etudiants.ToList();
+
+                //foreach (var item in Students)
+                //{
+                //    Console.WriteLine(item.Name);
+                //}
+
+                List<string> stds = db.Etudiants.Select(x => x.Name).ToList();
+
+                foreach (var item in stds)
                 {
-                    Console.WriteLine(item.Name);
-                }
-
-                Students = db.Etudiants.ToList();
-
-                foreach (var item in Students)
-                {
-                    Console.WriteLine(item.Name);
+                    Console.WriteLine(item);
                 }
 
                 Console.ReadLine();
