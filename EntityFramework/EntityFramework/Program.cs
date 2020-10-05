@@ -12,19 +12,10 @@ namespace EntityFramework
         {
             using (var db = new Models.TestDbContext())
             {
-                var xx = db.Etudiants.OrderBy(x=>x.Name).Skip(3).ToList();
+                var xxx = db.Etudiants.Any(x => x.Name.Contains("A"));
+                var xx = db.Etudiants.Any(x => x.Name.EndsWith("k"));
 
-                foreach (var item in xx)
-                {
-                    Console.WriteLine(item.Name);
-                }
-
-                var xxx = db.Etudiants.OrderBy(x => x.Name).Take(3).ToList();
-
-                foreach (var item in xxx)
-                {
-                    Console.WriteLine(item.Name);
-                }
+                var xxxx = db.Etudiants.All(x => x.Name.Contains("A"));
 
                 Console.ReadLine();
             }
