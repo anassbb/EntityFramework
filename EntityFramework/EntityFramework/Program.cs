@@ -12,12 +12,19 @@ namespace EntityFramework
         {
             using (var db = new Models.TestDbContext())
             {
-                var xx = db.Etudiants.SingleOrDefault(x => x.Name == "Anas");
-                var xx1 = db.Etudiants.FirstOrDefault(x => x.Name == "Anas");
+                var xx = db.Etudiants.OrderBy(x => x.Name);
 
-                Console.WriteLine(xx.Name);
+                foreach (var item in xx)
+                {
+                    Console.WriteLine(item.Name);
+                }
 
-                Console.WriteLine(xx1.Name);
+                var xxx = db.Etudiants.OrderByDescending(x => x.Name);
+
+                foreach (var item in xxx)
+                {
+                    Console.WriteLine(item.Name);
+                }
 
                 Console.ReadLine();
             }
