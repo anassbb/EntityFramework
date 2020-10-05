@@ -12,12 +12,9 @@ namespace EntityFramework
         {
             using (var db = new Models.TestDbContext())
             {
-                var xxx = db.Etudiants.Any(x => x.Name.Contains("A"));
-                var xx = db.Etudiants.Any(x => x.Name.EndsWith("k"));
-
-                var xxxx = db.Etudiants.All(x => x.Name.Contains("A"));
-
+                Etudaint etudiant = db.Etudiants.Find(1);                             
                 Console.ReadLine();
+                Etudaint etudiant2 = db.Etudiants.Find(1);
             }
         }
     }
