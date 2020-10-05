@@ -12,14 +12,14 @@ namespace EntityFramework
         {
             using (var db = new Models.TestDbContext())
             {
-                var xx = db.Etudiants.OrderBy(x => x.Name);
+                var xx = db.Etudiants.OrderBy(x=>x.Name).Skip(3).ToList();
 
                 foreach (var item in xx)
                 {
                     Console.WriteLine(item.Name);
                 }
 
-                var xxx = db.Etudiants.OrderByDescending(x => x.Name);
+                var xxx = db.Etudiants.OrderBy(x => x.Name).Take(3).ToList();
 
                 foreach (var item in xxx)
                 {
