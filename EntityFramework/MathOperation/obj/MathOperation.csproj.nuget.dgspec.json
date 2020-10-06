@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\anasa\\Desktop\\work\\entity framework\\EntityFramework\\EntityFramework\\EntityFramework.csproj": {}
+    "C:\\Users\\anasa\\Desktop\\work\\entity framework\\EntityFramework\\MathOperation\\MathOperation.csproj": {}
   },
   "projects": {
-    "C:\\Users\\anasa\\Desktop\\work\\entity framework\\EntityFramework\\EntityFramework\\EntityFramework.csproj": {
+    "C:\\Users\\anasa\\Desktop\\work\\entity framework\\EntityFramework\\MathOperation\\MathOperation.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\anasa\\Desktop\\work\\entity framework\\EntityFramework\\EntityFramework\\EntityFramework.csproj",
-        "projectName": "EntityFramework",
-        "projectPath": "C:\\Users\\anasa\\Desktop\\work\\entity framework\\EntityFramework\\EntityFramework\\EntityFramework.csproj",
+        "projectUniqueName": "C:\\Users\\anasa\\Desktop\\work\\entity framework\\EntityFramework\\MathOperation\\MathOperation.csproj",
+        "projectName": "MathOperation",
+        "projectPath": "C:\\Users\\anasa\\Desktop\\work\\entity framework\\EntityFramework\\MathOperation\\MathOperation.csproj",
         "packagesPath": "C:\\Users\\anasa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\anasa\\Desktop\\work\\entity framework\\EntityFramework\\EntityFramework\\obj\\",
+        "outputPath": "C:\\Users\\anasa\\Desktop\\work\\entity framework\\EntityFramework\\MathOperation\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\anasa\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -37,16 +37,6 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "dependencies": {
-            "Microsoft.EntityFrameworkCore.SqlServer": {
-              "target": "Package",
-              "version": "[5.0.0-rc.1.20451.13, )"
-            },
-            "Newtonsoft.Json": {
-              "target": "Package",
-              "version": "[12.0.3, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",
