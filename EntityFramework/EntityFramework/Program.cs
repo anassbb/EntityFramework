@@ -12,9 +12,7 @@ namespace EntityFramework
         {
             using (var db = new Models.TestDbContext())
             {
-                var xx = db.Etudiants.Where(x => (x.Name == "Anas" && x.Id == 2) || (x.Name == "Anas" && x.Id == 6))
-                     .Where(x=> x.Id > 4).ToList();
-                Console.ReadLine();
+                db.Database.EnsureCreated();
             }
         }
     }

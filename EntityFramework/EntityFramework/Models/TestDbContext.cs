@@ -8,18 +8,9 @@ namespace EntityFramework.Models
 {
     class TestDbContext : DbContext
     {
-        public DbSet<Human> Persons { get; set; }
+        public DbSet<Prof1esseur> Professeurs { get; set; }
 
-        public DbSet<Car> cars { get; set; }
-
-        public DbSet<Student> Students { get; set; }
-
-        public DbSet<StudentAddress> Addresses { get; set; }
-
-        public DbSet<Etudaint> Etudiants { get; set; }
-        public DbSet<Courses> Courses { get; set; }
-
-        public DbSet<EtudiantCourseRelation> EtudiantCourseRelations { get; set; }
+        public DbSet<lecon> Lecons { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -31,6 +22,12 @@ namespace EntityFramework.Models
             };
 
             optionsBuilder.UseSqlServer(ConnectionString.ToString());
+        }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Prof1esseur>().HasIndex(x=>x.Email).IsUnique();
+            base.OnModelCreating(modelBuilder); 
         }
 
     }
