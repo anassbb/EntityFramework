@@ -9,14 +9,14 @@ namespace EntityFramework
     class Program
     {
         static void Main(string[] args)
-        {
-            
+        {            
             using (var db = new Models.TestDbContext())
             {
-                foreach(Prof1esseur p in db.Professeurs.ToList())
-                {
-                    Console.WriteLine(p.Name);
-                }
+                Prof1esseur prof = db.Professeurs.SingleOrDefault(x => x.PK == 1);
+                prof.GPA = 2.5f;
+
+                db.Professeurs.Update(prof);
+                db.SaveChanges();
             }
         }
     }
