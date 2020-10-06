@@ -12,10 +12,9 @@ namespace EntityFramework
         {            
             using (var db = new Models.TestDbContext())
             {
-                Prof1esseur prof = db.Professeurs.SingleOrDefault(x => x.PK == 1);
-                prof.GPA = 2.5f;
+                Prof1esseur prof = db.Professeurs.SingleOrDefault(x => x.PK == 3);              
 
-                db.Professeurs.Update(prof);
+                db.Professeurs.Remove(prof);
                 db.SaveChanges();
             }
         }
