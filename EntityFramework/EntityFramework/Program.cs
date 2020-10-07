@@ -13,7 +13,11 @@ namespace EntityFramework
         {
             using (var db = new Models.TestDbContext())
             {
-                var a = db.Professeurs.Include(x=>x.lecons).ToList();
+                var xx = db.Professeurs.ToList();
+
+                Prof1esseur Anas = db.Professeurs.Find(1);
+
+                db.Entry(Anas).Collection(x => x.lecons).Load();
 
             }
         }
