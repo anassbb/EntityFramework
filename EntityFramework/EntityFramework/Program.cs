@@ -14,19 +14,11 @@ namespace EntityFramework
         {
             using (var db = new Models.TestDbContext())
             {
-                db.Database.EnsureCreated();
+               await db.Database.EnsureCreatedAsync();
 
-                db.Blogs.Add(new Blog
-                {
-                    Name = ".net",
-                    Posts = new List<Post>
-                      {
-                          new Post{ Title="c#", Content="c# 7.0 has a new feature, which is async Main method "}
-                      },
-                    URL = "https://www.youtube.com/"
-                });
-                db.SaveChanges();
-                Console.WriteLine("done");
+                var listOfBlog = await db.Blogs.Include(x=>x.Posts).ToListAsync();
+                                
+               Console.WriteLine("done");
 
             }
         }
