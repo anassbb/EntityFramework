@@ -8,9 +8,8 @@ namespace EntityFramework.Models
 {
     class TestDbContext : DbContext
     {
-        public DbSet<Prof1esseur> Professeurs { get; set; }
-
-        public DbSet<lecon> Lecons { get; set; }
+        public DbSet<Blog> Blogs { get; set; }
+        public DbSet<Post> Posts { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -26,7 +25,7 @@ namespace EntityFramework.Models
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Prof1esseur>().HasIndex(x=>x.Email).IsUnique();
+            modelBuilder.Entity<Blog>().Property(x => x.URL).HasField("_url");
             base.OnModelCreating(modelBuilder); 
         }
 
